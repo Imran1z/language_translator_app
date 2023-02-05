@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "677430352863",
+    "project_id": "translator-app-b3f82",
+    "storage_bucket": "translator-app-b3f82.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:677430352863:android:e791d488d77c144197026a",
+        "android_client_info": {
+          "package_name": "com.imran.languagetranslator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "677430352863-rgaluogtc8dnk2r0harb3g6r1cms022p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi3CVgfZ8099kv9LdVgD8bHNHmbZG0EjQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "677430352863-rgaluogtc8dnk2r0harb3g6r1cms022p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
