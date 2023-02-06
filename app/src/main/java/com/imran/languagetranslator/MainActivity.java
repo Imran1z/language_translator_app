@@ -29,10 +29,16 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
+    //these are some variabls which have the same name as in my XML file
+
     private Spinner SpnrFrom, SpnrTo;
     private TextInputEditText EdtSource;
     private ImageView InptMic;
     private TextView BtnTranslate,TxtViewTranslatedText;
+
+
+// these are array of languages  we have used in this app i have placed 17 languages you can place any amount you want
+    //there are two array fromlanguage and tolanguages
 
     String [] fromlanguages={"From","English","Hindi","Urdu","Arabic","German","Spanish","Africaans","French"
     ,"Italian","Japanese","Russian","Tamil","Telugu","Bengali","Gujarati","Kannada","Marathi"};
@@ -48,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
+//here i have initialised those variebls
         SpnrFrom=findViewById(R.id.SpnrFrom);
         SpnrTo=findViewById(R.id.SpnrTo);
         EdtSource=findViewById(R.id.EdtSource);
@@ -60,6 +66,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+                //This for the from spinner we place an on selected listener on it
+                //And set an array adapter on it
+        //in this to get the language codes we have used a getlanguagecode method
+        // and passed our language array in it
 
 
         SpnrFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -74,18 +85,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
         ArrayAdapter fromAdapter=new ArrayAdapter(this,R.layout.spinner_item,fromlanguages);
         fromAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         SpnrFrom.setAdapter(fromAdapter);
 
 
 
-
+        //This for the To spinner we place an on selected listener on it
+        //And set an array adapter on it
+        //in this to get the language codes we have used a getlanguagecode method
+        // and passed our language array in it
         SpnrTo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -104,7 +113,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+             //this is the Buttton which i have made out of a text view
+        // and i have placed an in click listener on it
+        // in this if we first make the translated text area as an empty string
+        // and checked for the languagecodes we have get form the spinner in the earlier steps
+        // after all the conditions we place an else condition for the method which will get our text translated
         BtnTranslate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -204,6 +217,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+//this is the method i have used to get language codes
     public int getLanguageCode(String language){
         int languageCode=0;
         switch (language){
